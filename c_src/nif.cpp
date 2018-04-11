@@ -1,8 +1,6 @@
 #include "erl_nif.h"
 #include "SpookyV2.h"
 
-#define __UNUSED(v) ((void)(v))
-
 #define SEED1 0x2AA43B55
 #define SEED2 0xA49026C0
 
