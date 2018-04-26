@@ -118,6 +118,10 @@ static ERL_NIF_TERM shv2_hash32_noseed(ErlNifEnv* env, int argc, const ERL_NIF_T
   }
 }
 
+static int upgrade(ErlNifEnv* env, void** priv_data, void** old_priv, ERL_NIF_TERM load_info) {
+  return 0;
+}
+
 
 static ErlNifFunc nif_funcs[] =
 {
@@ -129,5 +133,5 @@ static ErlNifFunc nif_funcs[] =
   {"hash32", 1, shv2_hash32_noseed}
 };
 
-ERL_NIF_INIT(spooky, nif_funcs, NULL, NULL, NULL, NULL);
+ERL_NIF_INIT(spooky, nif_funcs, NULL, NULL, upgrade, NULL);
 
